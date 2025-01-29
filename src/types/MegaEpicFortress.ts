@@ -14,71 +14,71 @@ export interface MegaEpicFortress {
 
 
 
-interface Location {
+export interface Location {
     continent: String,
     coordinates: Coordinate,
     nearbyLandmarks: LandMark[]
 }
 
 
-interface Coordinate {
+export interface Coordinate {
     latitude: Number,
     longitude: Number,
 }
 
-interface LandMark {
+export interface LandMark {
     name: String,
     type: String,
     distance: Number,
 }
 
-interface Defenses {
+export interface Defenses {
     walls: Wall,
     towers: Tower[],
 }
 
-interface Wall {
+export interface Wall {
     material: String,
     height: Number,
     enchantments: Enchantment[],
 }
 
-interface Enchantment {
+export interface Enchantment {
     name: String,
     level: Number,
 
 }
 
-interface Tower {
-    name: String,
-    height: Number,
-    armament: Armament,
-    guards: Guard[],
+export interface Tower {
+    name?: String,
+    height?: Number,
+    armament?: Armament,
+    guards?: Guard[],
 }
 
-interface Armament {
+export interface Armament {
     weaponType: String,
     ammunitionType: String,
     ammunitionCount: Number,
 }
 
-interface Guard {
-    name: String,
-    rank: String,
+export interface Guard {
+    name?: String,
+    rank?: String,
 }
 
-interface Inhabitants {
+export interface Inhabitants {
     population: Number,
     roles: Role[],
 }
-interface Role {
+export interface Role {
     role: String,
     count: Number,
     equipment?: Equipment ,
     professions?: Profession[],
 }
 
-interface Equipment {
+export interface Equipment {
     weapon?: String,
     staff?: String,
     armor?: String,
@@ -87,60 +87,60 @@ interface Equipment {
     amulet?: String,
 }
 
-interface Profession {
+export interface Profession {
     type: String,
     count: Number,
 }
 
 
-interface Resources {
+export interface Resources {
     storage: Storage,
     armory: Armory,
 }
 
-interface Storage {
+export interface Storage {
     food: Food,
     water: Water,
 }
 
-interface Food {
+export interface Food {
     type: String,
     quantity: Number,
     unit: String,
 }
 
-interface Water {
+export interface Water {
     source: String,
     capacity: Number,
     unit: String,
 }
 
-interface Armory {
+export interface Armory {
     weapons: Weapon[],
     shields: Shield[],
 }
 
-interface Weapon {
+export interface Weapon {
     type: String,
     quantity: Number,
 }
 
-interface Shield {
+export interface Shield {
     type: String,
     quantity: Number,
 }
 
-interface History {
+export interface History {
     founded: Founded,
     majorEvents: MajorEvent[],
 }
 
-interface Founded {
+export interface Founded {
     year: Number,
     by: String,
 }
 
-interface MajorEvent {
+export interface MajorEvent {
     year: Number,
     event: String,
     outcome: String,
