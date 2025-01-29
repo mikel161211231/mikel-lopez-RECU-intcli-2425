@@ -1,5 +1,5 @@
 import { megaEpicFortress } from "../data/data";
-import { getTowersAndGuardsByWeaponType } from "../helpers/helpers";
+import { getTowersAndGuardsByWeaponType, countVillagersByProfession } from "../helpers/helpers";
 import { Tower } from "../types/MegaEpicFortress";
 
 
@@ -23,3 +23,18 @@ describe('+ Test the function getTowersAndGuardsByWeaponType form helpers.ts', (
     })
     
 });
+
+
+describe('+ Test the function countVillagersByProfession from helpers.ts', () => {
+
+    it('it should return the record with all the values', () => {
+        const professionsRecord = countVillagersByProfession(megaEpicFortress);
+        expect(professionsRecord).not.toBeNull(); 
+        expect(professionsRecord["Farmer"]).toBe(467);
+        expect(professionsRecord["Blacksmith"]).toBe(31);
+        expect(professionsRecord["Merchant"]).toBe(63);
+        expect(professionsRecord["Healer"]).toBe(129);
+        expect(professionsRecord["Beggar"]).toBe(97);
+        expect(professionsRecord["Acolyte"]).toBe(237);
+    })
+})
