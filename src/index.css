@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+
+
+@theme {
+    --color-medievalGold: #DAA520;
+    --color-medievalRed: #8B0000;
+    --color-medievalBlue: #000080;
+    --color-medievalGray: #2F4F4F;
+    --color-medievalSepia: #cda882;
+    --color-darkSepia: #87634A;
+    --color-blackSepia: #513B2C;
+    --color-grey: #292524;
+    --color-darkBlue: #232428;
+}
